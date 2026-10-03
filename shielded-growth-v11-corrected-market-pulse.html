@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shielded Growth — Financial Freedom, Investments, Tax and Accounting support.">
+<title>Shielded Growth | Organise. Protect. Invest. Grow.</title>
+<style>
+:root{--navy:#102a43;--teal:#087f7b;--green:#0b8f6a;--gold:#d9a441;--ink:#16212b;--muted:#657481;--bg:#f6f8fa;--white:#fff;--line:#e1e7eb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:74px;display:flex;align-items:center;gap:26px;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:850}.mark{width:42px;height:42px;border-radius:11px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900}.tag{font-size:10px;color:var(--muted);font-weight:600;display:block}.navlinks{display:flex;gap:20px;font-size:14px;color:#465461}.navlinks a:hover{color:var(--teal)}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:10px;padding:12px 19px;font-weight:750;border:1px solid transparent;cursor:pointer}.primary{background:var(--green);color:#fff}.outline{border-color:#cbd5dc;background:#fff}.gold{background:var(--gold);color:#17212b}
+.hero{background:linear-gradient(135deg,#0e2d48,#123d52 55%,#0b665f);color:#fff;padding:80px 0 70px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}.eyebrow{color:#e5bd5e;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:12px}.hero h1{font-size:clamp(42px,6vw,70px);line-height:1.02;letter-spacing:-2.5px;margin:12px 0 18px}.hero h1 span{color:#e5bd5e}.hero p{font-size:18px;color:#d7e4e8;max-width:680px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:27px 0}.trust-row{display:flex;gap:20px;flex-wrap:wrap;margin-top:25px;font-size:13px;color:#d8e6e8}.hero-card{background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.15);border-radius:22px;padding:28px}.hero-card h3{margin:0 0 8px;font-size:22px}.hero-card p{font-size:14px}.hero-points{display:grid;gap:11px;margin-top:20px}.hero-points div{padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)}
+section{padding:76px 0}.head{max-width:720px;margin-bottom:32px}.head .eyebrow{color:var(--teal)}.head h2{font-size:38px;line-height:1.1;margin:8px 0 10px}.head p{color:var(--muted);margin:0}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{background:#fff;border:1px solid var(--line);border-radius:17px;padding:24px;transition:.2s}.service:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(16,42,67,.08)}.icon{font-size:28px}.service h3{margin:11px 0 7px}.service p{font-size:14px;color:var(--muted)}.service ul{padding-left:18px;color:var(--muted);font-size:13px}.more{color:var(--teal);font-size:13px;font-weight:800}
+.payment-band{background:#fff}
+.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.payment-card{background:#f8fafb;border:1px solid var(--line);border-radius:18px;padding:26px}
+.payment-card h3{margin:0 0 8px;font-size:22px}
+.payment-card p,.payment-card li{color:var(--muted);font-size:14px}
+.payment-card ul{padding-left:20px}
+.policy-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:15px}
+.policy-box strong{color:var(--ink)}
+.pay-note{font-size:12px;color:var(--muted);margin-top:12px}
+.client-band{background:#edf5f6}.client-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.client{background:#fff;border:1px solid var(--line);border-radius:17px;padding:25px}.client h3{margin:0 0 7px}.client p{color:var(--muted);font-size:14px;min-height:45px}
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:center}.about-box{background:linear-gradient(135deg,#e8f4f2,#f8f2df);border-radius:24px;padding:34px}.about-box h3{font-size:27px;margin:0 0 8px}.about-box p{color:#52616c}.credential-mini{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:18px}.credential-mini div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px;font-size:13px}
+.credentials{background:#fff}.cred-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.cred{border:1px solid var(--line);border-radius:14px;padding:18px;font-size:13px;background:#fff}.cred strong{display:block;margin-bottom:6px;color:var(--navy)}
+.enquiry{background:var(--navy);color:#fff}.enquiry-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}.enquiry p{color:#cbd9de}.form{background:#fff;color:var(--ink);padding:28px;border-radius:20px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:750}.field input,.field select,.field textarea{padding:12px;border:1px solid #d8e0e5;border-radius:9px;font:inherit}.field textarea{min-height:100px;resize:vertical}
+footer{background:#0a1d2b;color:#cbd8dc;padding:35px 0}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.small{font-size:12px;color:#8fa3aa}
+@media(max-width:850px){.navlinks{display:none}.hero-grid,.about,.enquiry-grid,.payment-grid{grid-template-columns:1fr}.services,.client-grid{grid-template-columns:1fr 1fr}.cred-grid{grid-template-columns:1fr 1fr}.hero{padding:60px 0}}
+@media(max-width:560px){.services,.client-grid,.cred-grid,.fields,.credential-mini{grid-template-columns:1fr}.hero h1{letter-spacing:-1px}.nav .btn{padding:9px 12px;font-size:12px}}
+
+/* Mobile-first enhancements */
+@media(max-width:850px){
+  body{overflow-x:hidden}
+  .container{width:min(100% - 28px,1160px)}
+  .hero h1{font-size:clamp(36px,11vw,58px);line-height:1.02}
+  .hero p{font-size:16px}
+  .services,.client-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:4px 3px 16px;margin-right:-3px;scrollbar-width:none}
+  .services::-webkit-scrollbar,.client-grid::-webkit-scrollbar{display:none}
+  .service,.client{min-width:82%;scroll-snap-align:start}
+  .services::after,.client-grid::after{content:"";min-width:2px}
+  .cred-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:3px 2px 14px;scrollbar-width:none}
+  .cred-grid::-webkit-scrollbar{display:none}
+  .cred{min-width:78%;scroll-snap-align:start}
+  .credential-mini{grid-template-columns:1fr}
+  .hero-grid,.about,.enquiry-grid{grid-template-columns:1fr}
+  .hero-card{margin-top:10px}
+  .head h2{font-size:clamp(29px,8vw,38px)}
+  .about{gap:30px}
+  .form{padding:21px}
+  .fields{grid-template-columns:1fr}
+  .field.full{grid-column:auto}
+}
+@media(max-width:560px){
+  header .nav{height:66px}
+  .brand{font-size:14px}
+  .mark{width:37px;height:37px}
+  .tag{font-size:8px}
+  header .nav>.primary{display:none}
+  .hero{padding:52px 0 48px}
+  .hero-actions .btn{width:100%}
+  .trust-row{display:grid;gap:8px}
+  .service,.client{min-width:88%}
+  .cred{min-width:86%}
+  section{padding:58px 0}
+  .client p{min-height:auto}
+  .enquiry h2{font-size:34px!important}
+}
+/* Bottom mobile action bar */
+.mobile-actions{display:none}
+@media(max-width:560px){
+  .mobile-actions{position:fixed;display:grid;grid-template-columns:1fr 1fr 1fr;left:0;right:0;bottom:0;z-index:100;background:#fff;border-top:1px solid #dfe6ea;box-shadow:0 -8px 25px rgba(16,42,67,.10);padding:7px 8px calc(7px + env(safe-area-inset-bottom));gap:6px}
+  .mobile-actions a{font-size:11px;font-weight:800;text-align:center;padding:9px 4px;border-radius:8px}
+  .mobile-actions .enq{background:#0b8f6a;color:#fff}
+  .mobile-actions .pay{background:#d9a441;color:#17212b}
+  .mobile-actions .login{background:#102a43;color:#fff}
+  footer{padding-bottom:92px}
+}
+
+</style>
+
+<style>
+/* Corrected header + Market Pulse placement */
+.sg-header{
+  position:sticky;top:0;z-index:80;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #e1e7eb;
+}
+.sg-nav{
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  position:relative;
+}
+.sg-brand{display:flex;align-items:center;gap:10px;font-weight:850}
+.sg-brand .mark{flex:0 0 auto}
+.brand-copy{line-height:1.05}
+.brand-copy strong{font-size:14px;display:block}
+.brand-copy .tag{margin-top:4px}
+.sg-brand-title{
+  display:none;
+  font-size:18px;
+  font-weight:900;
+  letter-spacing:.03em;
+  color:#16212b;
+}
+.sg-desktop-nav{display:flex;align-items:center;gap:20px;font-size:14px;color:#465461}
+.sg-desktop-nav a:hover{color:#087f7b}
+.sg-menu-btn{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  border:1px solid #d5dde2;
+  background:#fff;
+  color:#163b52;
+  border-radius:10px;
+  padding:9px 13px;
+  font:inherit;
+  font-size:13px;
+  font-weight:800;
+}
+.sg-mobile-menu{
+  background:#fff;
+  border-top:1px solid #edf0f2;
+  box-shadow:0 10px 24px rgba(16,42,67,.08);
+}
+.sg-mobile-menu a{
+  display:block;
+  padding:13px 20px;
+  border-bottom:1px solid #edf0f2;
+  font-size:14px;
+  font-weight:750;
+  color:#163b52;
+}
+.sg-mobile-menu a:last-child{border-bottom:0}
+
+/* The bulletin is a separate, thin strip immediately ABOVE the hero. */
+.market-pulse-bulletin{
+  width:100%;
+  background:#f7f9fa;
+  border-bottom:1px solid #e3e8eb;
+  padding:5px 0;
+}
+.market-pulse-inner{
+  width:min(1160px,100%);
+  margin:0 auto;
+  min-height:44px;
+  padding:0 14px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  overflow:hidden;
+}
+.pulse-title{
+  flex:0 0 auto;
+  padding-right:9px;
+  border-right:1px solid #d8dfe3;
+  line-height:1;
+}
+.pulse-title span{
+  display:block;
+  color:#163b52;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+.pulse-title small{
+  display:block;
+  margin-top:4px;
+  color:#0a9b72;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.04em;
+}
+.pulse-title i{
+  display:inline-block;
+  width:6px;height:6px;
+  margin-right:3px;
+  border-radius:50%;
+  background:#0a9b72;
+}
+.pulse-track{
+  display:flex;
+  align-items:center;
+  min-width:0;
+  overflow-x:auto;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+}
+.pulse-track::-webkit-scrollbar{display:none}
+.pulse-item{
+  flex:0 0 auto;
+  min-width:126px;
+  padding:0 12px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  border-right:1px solid #dfe4e7;
+  white-space:nowrap;
+}
+.pulse-item b{font-size:10px;color:#173b52}
+.pulse-item strong{font-size:11px;color:#142f43}
+.pulse-item em{font-size:9px;color:#0a9b72;font-style:normal;font-weight:800}
+
+@media(max-width:850px){
+  .sg-header{position:relative}
+  .sg-nav{min-height:66px;width:calc(100% - 28px)}
+  .sg-desktop-nav{display:none}
+  .sg-brand-title{display:block}
+  .sg-menu-btn{display:inline-flex}
+  .sg-brand .mark{width:37px;height:37px}
+  .brand-copy strong{font-size:13px}
+  .brand-copy .tag{font-size:8px}
+}
+@media(max-width:560px){
+  .sg-brand-title{font-size:17px}
+  .sg-menu-btn{padding:9px 11px}
+  .market-pulse-bulletin{padding:4px 0}
+  .market-pulse-inner{min-height:43px;padding:0 12px;gap:8px}
+  .pulse-title span{font-size:9px}
+  .pulse-item{min-width:120px;padding:0 10px}
+}
+</style>
+
+</head>
+<body>
+
+<header class="sg-header">
+  <div class="container sg-nav">
+    <a class="sg-brand" href="#home" aria-label="Shielded Growth home">
+      <span class="mark">SG</span>
+      <span class="brand-copy">
+        <strong>SHIELDED GROWTH</strong>
+        <span class="tag">Organise. Protect. Invest. Grow.</span>
+      </span>
+    </a>
+
+    <div class="sg-brand-title">SHIELDED GROWTH</div>
+
+    <button class="sg-menu-btn" type="button" aria-expanded="false" aria-controls="sg-mobile-menu">
+      ☰ <span>Menu</span>
+    </button>
+
+    <nav class="sg-desktop-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#client-area">Client Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <div id="sg-mobile-menu" class="sg-mobile-menu" hidden>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#client-area">Client Area</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<section id="market-pulse" class="market-pulse-bulletin" aria-label="Market Pulse">
+  <div class="market-pulse-inner">
+    <div class="pulse-title">
+      <span>MARKET PULSE</span>
+      <small><i></i> LIVE</small>
+    </div>
+    <div class="pulse-track" aria-label="Scrollable market information">
+      <div class="pulse-item"><b>🟡 GOLD</b><strong>₹—</strong><em>Live</em></div>
+      <div class="pulse-item"><b>⚪ SILVER</b><strong>₹—</strong><em>Live</em></div>
+      <div class="pulse-item"><b>📈 SENSEX</b><strong>—</strong><em>Live</em></div>
+      <div class="pulse-item"><b>📊 NIFTY 50</b><strong>—</strong><em>Live</em></div>
+    </div>
+  </div>
+</section>
+
+
+<main id="home">
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Shielded Growth</div>
+<h1>Organise. <span>Protect.</span> Invest. Grow.</h1>
+<p>Accounting • Taxation • Compliance • Investments • Financial Planning</p><p style="font-size:16px">From financial complexity to financial clarity — and ultimately toward financial freedom.</p>
+<div class="hero-actions"><a class="btn primary" href="#contact">Start Your Financial Journey →</a><a class="btn outline" href="#clients">Client Area →</a></div>
+<div class="trust-row"><span>✓ Build Wealth with Discipline</span><span>✓ Protect What Matters</span><span>✓ Stay Financially Organised</span></div>
+</div>
+<div class="hero-card">
+<h3>From Financial Clarity to Financial Freedom</h3>
+<p>Whether you are starting an investment, organising your taxes, protecting what matters or bringing business accounts under control, Shielded Growth is designed to be your single starting point.</p>
+<div class="hero-points"><div>📚 Organise — Accounting & Compliance</div><div>🛡️ Protect — Insurance & Financial Security</div><div>📈 Invest — Mutual Funds & Fixed Deposits</div><div>🌱 Grow — Financial Planning & Freedom</div></div>
+</div>
+</div>
+</section>
+
+
+
+<section id="why" class="client-band">
+  <div class="container">
+    <div class="head">
+      <div class="eyebrow">Why Shielded Growth?</div>
+      <h2>Built through the journey. Built for the journey.</h2>
+      <p>Financial decisions are rarely about one product. Sometimes you simply need someone to understand what is happening in your life and help you see the next practical step.</p>
+    </div>
+    <a class="why-link" href="#about" style="display:block;text-decoration:none">
+      <div class="client" style="max-width:780px;margin:0 auto;text-align:center">
+        <h3>Discover why Shielded Growth exists →</h3>
+        <p>Our journey, experience, philosophy and the practical approach behind the brand.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<section id="start">
+  <div class="container">
+    <div class="head" style="text-align:center">
+      <div class="eyebrow">Start a Conversation</div>
+      <h2>You don't have to know exactly what financial service you need.</h2>
+      <p>Start by telling us what's going on in your life right now — what is important, what is approaching, what you are struggling with, or what you simply want to understand better.</p>
+      <p style="margin-top:10px">You may be planning for a goal, organising your finances, dealing with commitments, thinking about investments or protection, facing a tax or compliance concern, or simply wondering what to do next.</p>
+      <a class="btn primary" href="https://shieldedgrowth.investwell.app/app/#/contactUs" target="_blank" rel="noopener" style="margin-top:16px">Tell Us What's Going On →</a>
+    </div>
+  </div>
+</section>
+<section id="services">
+<div class="container">
+<div class="head"><div class="eyebrow">Our Services</div><h2>Start with what needs attention.</h2><p>You do not need to know which product you need. Tell us what needs attention, and we can start from there.</p><p class="small" style="margin-top:10px">On mobile, swipe left or right to explore the services →</p><p class="small" style="margin-top:10px">On mobile, swipe left or right to explore the cards →</p></div>
+<div class="services">
+<article class="service"><div class="icon">📈</div><h3>Mutual Funds</h3><p>Investment distribution and portfolio support for long-term goals.</p><ul><li>SIP & lump-sum</li><li>Goal-based investing</li><li>Portfolio review</li><li>AMFI registered distribution</li></ul><a class="more" href="#contact">Know More →</a></article>
+<article class="service"><div class="icon">🏦</div><h3>Fixed Deposits</h3><p>Support for suitable fixed-deposit products through applicable channels.</p><ul><li>Bank FDs</li><li>Corporate FDs</li><li>Tenure comparison</li><li>Application support</li></ul><a class="more" href="#contact">Know More →</a></article>
+<article class="service"><div class="icon">🛡️</div><h3>Insurance</h3><p>Protection-oriented insurance solutions through authorised channels.</p><ul><li>Life insurance</li><li>Health insurance</li><li>General insurance</li><li>Protection planning</li></ul><a class="more" href="#contact">Know More →</a></article>
+<article class="service"><div class="icon">🧾</div><h3>Tax & Compliance</h3><p>Practical support for individuals and businesses.</p><ul><li>ITR filing support</li><li>GST services</li><li>Tax planning</li><li>Business compliance</li></ul><a class="more" href="#contact">Know More →</a></article>
+<article class="service"><div class="icon">📚</div><h3>Accounting & Bookkeeping</h3><p>Structured accounting support for professionals and businesses.</p><ul><li>Bookkeeping</li><li>Tally accounting</li><li>Payroll & MIS</li><li>Financial statements</li></ul><a class="more" href="#contact">Know More →</a></article>
+<article class="service"><div class="icon">🧭</div><h3>Financial Freedom Planning</h3><p>Bring cash flow, debt, savings and goals into one practical plan.</p><ul><li>Cash-flow planning</li><li>Debt & EMI analysis</li><li>Savings & investment plan</li><li>Financial organisation</li></ul><a class="more" href="#contact">Know More →</a></article>
+</div>
+</div>
+</section>
+
+<section id="clients" class="client-band">
+<div class="container">
+<div class="head"><div class="eyebrow">Client Area</div><h2>Different needs. The right door.</h2><p>Keep existing clients and new enquiries separate and simple.</p></div>
+<div class="client-grid">
+<div class="client"><h3>📈 Existing Investment Client</h3><p>View your mutual fund portfolio and access your investment account.</p><a class="btn primary" href="https://shieldedgrowth.investwell.io/app/#/login" target="_blank" rel="noopener">Client Portfolio Login →</a><div class="small">Powered by InvestWell</div></div>
+<div class="client"><h3>📚 Accounting / Tally Client</h3><p>Access your accounting environment once the correct Tally Cloud destination is configured.</p><a class="btn outline" href="#contact">Accounting Login →</a></div>
+<div class="client"><h3>📝 New Client / General Enquiry</h3><p>Interested in investments, FD, insurance, tax or accounting? Send an enquiry.</p><a class="btn gold" href="#contact">Send Enquiry →</a></div>
+</div>
+</div>
+</section>
+
+
+<section id="about">
+  <div class="container">
+    <div class="head">
+      <div class="eyebrow">About Shielded Growth</div>
+      <h2>Why it exists. What backs it. Why people come here.</h2>
+      <p>Shielded Growth brings years of practical experience across insurance, accounting, finance, taxation, compliance and investments into one place.</p>
+    </div>
+    <div class="about">
+      <div class="about-box">
+        <h3>Our Journey</h3>
+        <p><strong>2008</strong> — Insurance & financial services</p>
+        <p><strong>2011</strong> — Accounting & finance</p>
+        <p><strong>2013–14</strong> — Mutual funds & investment services</p>
+        <p class="small">Mutual-fund start year to be confirmed before final publication.</p>
+      </div>
+      <div>
+        <h3>Built through real financial life.</h3>
+        <p>We have built, faced setbacks, rebuilt and continued working towards stability. That experience has shaped how we look at financial problems: understand the situation first, organise what can be organised, protect what matters, and then work towards growth.</p>
+        <p>We don't believe every question begins with a product. Sometimes it begins with a conversation.</p>
+        <h3 style="margin-top:24px">Organise. Protect. Invest. Grow.</h3>
+        <p>From financial complexity to financial clarity, and from clarity towards financial freedom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="client-area" class="client-band">
+  <div class="container">
+    <div class="head">
+      <div class="eyebrow">Client Area</div>
+      <h2>Existing clients can access their services here.</h2>
+      <p>Client login, investment access, applicable service payments/invoices and important documents can be kept together here.</p>
+    </div>
+    <div class="client-grid">
+      <div class="client"><h3>📈 Client Login</h3><p>Access your relevant investment/client platform.</p><a class="btn secondary" href="https://shieldedgrowth.investwell.io/app/#/login" target="_blank" rel="noopener">Client Login →</a></div>
+      <div class="client"><h3>💳 Service Payments</h3><p>Payments for applicable professional services can be handled through the designated payment channel.</p><a class="btn secondary" href="https://razorpay.me/@shieldedgrowth" target="_blank" rel="noopener">Payment →</a></div>
+      <div class="client"><h3>📄 Terms & Disclosures</h3><p>Terms, privacy, disclosures and service-related information.</p><a class="btn secondary" href="#contact">View Information →</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials" class="credentials">
+<div class="container">
+<div class="head"><div class="eyebrow">Credentials & Associations</div><h2>Experience backed by professional credentials and industry relationships.</h2><p>Each item will be described accurately as a credential, association or recognition.</p></div>
+<div class="cred-grid">
+<div class="cred"><strong>FCTP</strong>Fellow Chartered Tax Practitioner — Institute of Chartered Tax Practitioners India.</div>
+<div class="cred"><strong>NJ Wealth</strong>Partner / business association.</div>
+<div class="cred"><strong>Bajaj Finserv AMC</strong>Certificate of Business Association.</div>
+<div class="cred"><strong>Axis Mutual Fund</strong>Certificate of Appreciation.</div>
+<div class="cred"><strong>KFintech</strong>Relevant platform / distribution capabilities to be listed after verification.</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section id="payment" class="payment-band">
+<div class="container">
+<div class="head">
+<div class="eyebrow">Secure Payments</div>
+<h2>Pay Shielded Growth securely online.</h2>
+<p>For professional services and approved client payments, we can provide a secure Razorpay payment option. The exact payment link or Razorpay Checkout connection will be added after the account details are confirmed.</p>
+</div>
+<div class="payment-grid">
+<div class="payment-card">
+<h3>💳 Make a Payment</h3>
+<p>Use the secure Razorpay payment gateway for an invoice, professional service fee or other approved payment due to Shielded Growth.</p>
+<a class="btn primary" href="https://razorpay.me/@shieldedgrowth" target="_blank" rel="noopener">Pay securely via Razorpay →</a>
+<div class="pay-note"><strong>Shielded Growth Razorpay:</strong> <a href="https://razorpay.me/@shieldedgrowth" target="_blank" rel="noopener">https://razorpay.me/@shieldedgrowth</a><br>This is your public Razorpay.me payment link. Clients can use it to make payments securely.</div>
+</div>
+<div class="payment-card">
+<h3>📜 Payment Policy</h3>
+<ul>
+<li>Payments should be made only against a clearly identified service, invoice or agreed professional fee.</li>
+<li>The payer should verify the service description and amount before completing payment.</li>
+<li>Razorpay may process the transaction and applicable gateway charges may apply according to the payment method and Razorpay terms.</li>
+<li>Refunds, cancellations and adjustments will be handled according to the applicable service agreement and the refund terms communicated with the client.</li>
+<li>Investment products such as mutual funds, insurance and deposits are subject to their respective product terms, eligibility, documentation and applicable regulations; payment of a service fee does not itself constitute an investment transaction.</li>
+<li>Clients should retain the payment receipt and invoice/reference number for future correspondence.</li>
+</ul>
+<div class="policy-box"><strong>Important:</strong> The final published Payment Policy, refund wording, tax treatment and service-specific terms should be reviewed before the website goes live.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="enquiry">
+<div class="container" style="padding-bottom:0">
+<div class="policy-box"><strong>Official Email:</strong> <a href="mailto:connect@shieldedgrowth.in">connect@shieldedgrowth.in</a></div>
+</div>
+<div class="container enquiry-grid">
+<div><div class="eyebrow">Start a Conversation</div><h2 style="font-size:40px;line-height:1.1">Tell us what you need help with.</h2><p>Select the service that interests you. This will become the starting point for the Shielded Growth CRM lead process.</p><p>For now, this is a website demonstration. We will connect the actual CRM form only after the design is approved and the secure integration instructions are reviewed.</p></div>
+<form class="form" onsubmit="event.preventDefault();alert('Demo form only — CRM connection will be added later.');">
+<div class="fields">
+<div class="field"><label>Name</label><input placeholder="Your name"></div>
+<div class="field"><label>Mobile</label><input placeholder="Mobile number"></div>
+<div class="field"><label>Email</label><input type="email" placeholder="Email address"></div>
+<div class="field"><label>I'm interested in</label><select><option>Mutual Funds / SIP</option><option>Fixed Deposit</option><option>Insurance</option><option>Tax / ITR</option><option>GST</option><option>Accounting / Bookkeeping</option><option>Financial Planning</option><option>Other</option></select></div>
+<div class="field full"><label>Message</label><textarea placeholder="Tell us briefly what you need..."></textarea></div>
+</div>
+<button class="btn primary" style="margin-top:15px;width:100%">Send Enquiry →</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container foot"><div><strong>SHIELDED GROWTH</strong><div class="small">Organise. Protect. Invest. Grow.</div></div><div class="small"><a href="#payment">Payment Policy</a> &nbsp;•&nbsp; connect@shieldedgrowth.in &nbsp;•&nbsp; © 2026 Shielded Growth. All rights reserved.</div></div>
+<div class="container small" style="margin-top:18px">Website draft. Product availability, registrations, authorisations, disclosures and regulatory wording should be verified before publication.</div>
+</footer>
+
+
+<div class="mobile-actions">
+  <a class="enq" href="https://shieldedgrowth.investwell.app/app/#/contactUs" target="_blank" rel="noopener">📩 Enquire</a>
+  <a class="pay" href="#client-area">👤 Client Area</a>
+  <a class="login" href="#contact">☎️ Contact</a>
+</div>
+
+
+
+<script>
+(function(){
+  const btn = document.querySelector('.sg-menu-btn');
+  const menu = document.getElementById('sg-mobile-menu');
+  if(!btn || !menu) return;
+  btn.addEventListener('click', function(){
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    menu.hidden = open;
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', function(){
+    menu.hidden = true;
+    btn.setAttribute('aria-expanded','false');
+  }));
+})();
+</script>
+
+</body>
+</html>
